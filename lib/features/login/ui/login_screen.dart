@@ -16,7 +16,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final formKey = GlobalKey<FormState>();
+  final formKeyEmail = GlobalKey<FormState>();
+  final formKeyPassword = GlobalKey<FormState>();
   bool isObsecure = true;
 
   @override
@@ -40,12 +41,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               verticalSpace(36),
               Form(
-                key: formKey,
+                key: formKeyEmail,
                 child: AppTextFormFiled(hintText: "Email"),
               ),
               verticalSpace(18),
               Form(
-                key: formKey,
+                key: formKeyPassword,
                 child: AppTextFormFiled(
                   hintText: "Password",
                   isObscureText: isObsecure,
@@ -77,7 +78,9 @@ class _LoginScreenState extends State<LoginScreen> {
               verticalSpace(16),
               const TermsAndConditionsText(),
               verticalSpace(60),
-              const DontHaveAccountText(),
+              Align(
+                  alignment: Alignment.center,
+                  child: const DontHaveAccountText()),
             ],
           ),
         ),
