@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/helpers/spacing.dart';
-import '../../../../core/widgets/app_text_form_filed.dart';
+import '../../../../core/widgets/app_text_form_field.dart';
 
 class EmailAndPassword extends StatefulWidget {
   const EmailAndPassword({super.key});
@@ -54,7 +54,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
       key: context.read<LoginCubit>().formKey,
       child: Column(
         children: [
-          AppTextFormFiled(
+          AppTextFormField(
             controller: context.read<LoginCubit>().emailController,
             hintText: "Email",
             validator: (value) {
@@ -66,7 +66,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             },
           ),
           verticalSpace(18),
-          AppTextFormFiled(
+          AppTextFormField(
             controller: context.read<LoginCubit>().passwordController,
             hintText: "Password",
             isObscureText: isObsecure,

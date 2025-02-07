@@ -3,7 +3,7 @@ import 'package:advanced_docdoc_flutter/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AppTextFormFiled extends StatelessWidget {
+class AppTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
   final InputBorder? focusedBorder;
   final InputBorder? enabledBorder;
@@ -16,7 +16,7 @@ class AppTextFormFiled extends StatelessWidget {
   final TextEditingController? controller;
   final Function(String?) validator;
 
-  const AppTextFormFiled(
+  const AppTextFormField(
       {super.key,
       this.contentPadding,
       this.focusedBorder,

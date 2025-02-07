@@ -12,10 +12,13 @@ class LoginCubit extends Cubit<LoginState> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  void emitLoginStates(LoginRequestBody loginRequestBody) async {
+  void emitLoginStates() async {
     emit(LoginState.loading());
 
-    final response = await _loginRepo.login(loginRequestBody);
+    final response = await _loginRepo.login(
+      LoginRequestBody(
+          email: emailController.text, password: passwordController.text),
+    );
     //the next line //when() method is from Freezed package
     response.when(
       success: (loginResponse) {
