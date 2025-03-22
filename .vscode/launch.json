@@ -2,9 +2,10 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "DocDoc Development n",
+        "name": "DocDoc Development",
         "request": "launch",
         "type": "dart",
+        "program": "lib/main_development.dart",
         "args": ["--flavor", "developmnet", "--target", "lib/main_development.dart" ]
       },
       {
