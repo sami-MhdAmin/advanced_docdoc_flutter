@@ -22,7 +22,7 @@ class DoctorsListView extends StatelessWidget {
                   child: Image.network(
                     width: 110.w,
                     height: 120.h,
-                    'https://static.wikia.nocookie.net/five-world-war/images/6/64/Hisoka.jpg/revision/latest?cb=20190313114050',
+                    'https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=640:*',
                     fit: BoxFit.cover,
                   ),
                 ),

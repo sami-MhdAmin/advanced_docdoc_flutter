@@ -33,7 +33,7 @@ class DoctorsSpecialityListView extends StatelessWidget {
                 ),
                 verticalSpace(8),
                 Text(
-                  'Omar',
+                  'QWERTY',
                   style: TextStyles.font12DarkBlueRegular,
                 ),
               ],
