@@ -15,7 +15,7 @@ class DioFactory {
       dio!
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
-      // addDioHeaders();
+      addDioHeaders();
       addDioInterceptor();
       return dio!;
     } else {
@@ -32,15 +32,17 @@ class DioFactory {
       ),
     );
   }
+
+  static void addDioHeaders() async {
+    dio?.options.headers = {
+      'Accept': 'application/json',
+      'Authorization':
+          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzQzMjAyMjg3LCJleHAiOjE3NDMyODg2ODcsIm5iZiI6MTc0MzIwMjI4NywianRpIjoiTDJISGRCRmNvclhGQ1lrcCIsInN1YiI6IjM0OTMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Tq45RXYVNZSD1rRF3OvAZzNXl3OA87UdPcRogFxUJCk',
+    };
+  }
 }
 
-  // static void addDioHeaders() async {
-  //   dio?.options.headers = {
-  //     'Accept': 'application/json',
-  //     'Authorization':
-  //         'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
-  //   };
-  // }
+  
 
   // static void setTokenIntoHeaderAfterLogin(String token) {
   //   dio?.options.headers = {
